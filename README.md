@@ -29,3 +29,36 @@ If you're using a router or have more than one page to prerender, edit the `rout
 npm install
 npm start
 ```
+
+### behaviour
+
+输入 `localhost:3000` 页面显示
+
+```js
+111111
+```
+
+输入 `localhost:3000/home` 页面显示
+
+```js
+111111
+222222
+```
+
+输入 `localhost:3000/home/second` 页面显示
+
+```js
+111111
+222222
+333333
+```
+
+打包出的目录结构为:
+
+```
+-- index.html
+-- home
+    second
+      index.html
+    index.html
+```

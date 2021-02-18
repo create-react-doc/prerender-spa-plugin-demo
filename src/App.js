@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
 
@@ -6,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -19,7 +20,12 @@ class App extends Component {
           >
             Learn React
           </a>
-        </header>
+        </header> */}
+        <BrowserRouter>
+          <Route path="/" render={routeProps => <div>111111</div>} />
+          <Route path="/home" render={routeProps => <div>222222</div>} />
+          <Route path="/home/second" render={routeProps => <div>333333</div>} />
+        </BrowserRouter>
       </div>
     );
   }
